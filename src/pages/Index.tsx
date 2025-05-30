@@ -1,5 +1,7 @@
 
 import { WalletConnect } from '@/components/WalletConnect';
+import { NetworkStatus } from '@/components/NetworkStatus';
+import { WalletInfo } from '@/components/WalletInfo';
 
 const Index = () => {
   return (
@@ -16,6 +18,12 @@ const Index = () => {
             </p>
           </div>
           <WalletConnect />
+        </div>
+
+        {/* Network and Wallet Information */}
+        <div className="space-y-6">
+          <NetworkStatus />
+          <WalletInfo />
         </div>
       </div>
     </div>
