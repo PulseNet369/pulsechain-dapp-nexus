@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+
+# PulseChain dApp Nexus
+
+A decentralized application for interacting with the PulseChain ecosystem, including tokens and distributors.
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/9723c0d2-f99b-4001-87a9-13462ef3d91a
 
-## How can I edit this code?
+## GitHub Pages Deployment
 
-There are several ways of editing your application.
+This project is configured to be deployed on GitHub Pages. Follow these steps:
 
-**Use Lovable**
+### 1. Repository Setup
+1. Push this code to a GitHub repository
+2. Go to your repository settings on GitHub
+3. Navigate to "Pages" in the left sidebar
+4. Under "Source", select "GitHub Actions"
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9723c0d2-f99b-4001-87a9-13462ef3d91a) and start prompting.
+### 2. Automatic Deployment
+The project includes a GitHub Actions workflow that will automatically:
+- Build the application when you push to the main branch
+- Deploy it to GitHub Pages
+- Make it available at `https://yourusername.github.io/pulsechain-dapp-nexus/`
 
-Changes made via Lovable will be committed automatically to this repo.
+### 3. Custom Domain (Optional)
+If you want to use a custom domain:
+1. Add a `CNAME` file to the `public` folder with your domain
+2. Configure your domain's DNS to point to GitHub Pages
+3. Update the `base` config in `vite.config.ts` to use your domain
 
-**Use your preferred IDE**
+## Local Development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### Setup
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd pulsechain-dapp-nexus
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
-
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+- Ethers.js for Web3 integration
 
-## How can I deploy this project?
+## Features
 
-Simply open [Lovable](https://lovable.dev/projects/9723c0d2-f99b-4001-87a9-13462ef3d91a) and click on Share -> Publish.
+- **Wallet Connection**: Connect to MetaMask and other Web3 wallets
+- **Network Detection**: Automatic PulseChain network detection and switching
+- **PLS Balance**: Display native PulseChain token balance
+- **Responsive Design**: Mobile-friendly interface
 
-## Can I connect a custom domain to my Lovable project?
+## Configuration
 
-Yes, you can!
+The dApp is configured for PulseChain mainnet. Network settings can be found in `src/config/pulsechain.ts`.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Push to GitHub (automatic deployment will trigger)
+5. Create a Pull Request
+
+## License
+
+This project is open source and available under the MIT License.
